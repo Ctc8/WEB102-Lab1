@@ -1,0 +1,36 @@
+.calendar-container {
+  display: grid;
+  grid-template-columns: 50px repeat(7, 1fr); 
+  gap: 10px;
+  padding: 10px; /* Reduced padding */
+}
+
+.time-column {
+  display: grid;
+  grid-template-rows: repeat(9, 50px); /* 9 rows for 9 hours (9 AM to 5 PM) */
+  gap: 1px;
+}
+
+.calendar-day {
+  display: grid;
+  grid-template-rows: repeat(9, 50px); /* 9 rows for 9 hours (9 AM to 5 PM) */
+  gap: 1px;
+}
+
+.day-header {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 5px; /* Reduced padding */
+}
+
+.event {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  padding: 5px; /* Reduced padding */
+  border-radius: 4px;
+  margin: 2px 0; /* Reduced margin */
+  grid-row: span var(--duration); /* Span rows based on duration */
+}
+
